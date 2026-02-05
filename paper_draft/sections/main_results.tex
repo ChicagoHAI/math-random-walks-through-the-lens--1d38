@@ -1,0 +1,34 @@
+\section{Main Results}
+
+\begin{theorem}[Security-Equilibrium Equivalence]
+Let $\RW$ be a security game random walk and $\Game$ be its corresponding game-theoretic formulation. A protocol is $\epsilon$-secure in $\RW$ if and only if there exists a Nash equilibrium in $\Game$ with payoff at most $\epsilon$.
+\end{theorem}
+
+\begin{proof}
+We proceed in two steps:
+
+1) First, we show that any successful adversary strategy in $\RW$ can be converted into a profitable deviation in $\Game$. Given an adversary $A$ that wins with probability $p > \epsilon$, we construct a strategy $s_A$ in $\Game$ that achieves payoff greater than $\epsilon$.
+
+2) Conversely, given any strategy in $\Game$ with payoff greater than $\epsilon$, we construct an adversary that breaks the security with probability greater than $\epsilon$.
+\end{proof}
+
+\begin{theorem}[Convergence Rate Equivalence]
+The convergence rate of a security game random walk to its steady state is equal to the convergence rate of best-response dynamics in its game-theoretic counterpart.
+\end{theorem}
+
+\begin{proof}
+Let $\pi_t$ be the distribution at time $t$ in the random walk and $\sigma_t$ be the mixed strategy profile at time $t$ in the game. We show that:
+
+1) $\|\pi_t - \pi_\infty\|_{\text{TV}} \leq ce^{-\lambda t}$
+2) $\|\sigma_t - \sigma_\infty\|_2 \leq ce^{-\lambda t}$
+
+where $\lambda$ is the spectral gap of the transition matrix.
+\end{proof}
+
+\begin{theorem}[Composition Theorem]
+If random walks $\RW_1$ and $\RW_2$ are secure with parameters $\epsilon_1$ and $\epsilon_2$ respectively, their parallel composition is secure with parameter $\max(\epsilon_1, \epsilon_2)$.
+\end{theorem}
+
+\begin{proof}
+Consider the product game $\Game = \Game_1 \times \Game_2$. By contradiction, assume there exists a strategy achieving payoff greater than $\max(\epsilon_1, \epsilon_2)$. This would imply a winning strategy in either $\Game_1$ or $\Game_2$ exceeding their respective security bounds.
+\end{proof}

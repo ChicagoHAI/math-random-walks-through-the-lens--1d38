@@ -1,0 +1,22 @@
+\section{Preliminaries}
+
+\subsection{Cryptographic Random Walks}
+
+\begin{definition}[Security Game Random Walk]
+A security game random walk is a tuple $(\mathcal{S}, \Adv, \Challenger, \pi)$ where:
+\begin{itemize}
+    \item $\mathcal{S}$ is the state space
+    \item $\Adv$ is the adversary's action space
+    \item $\Challenger$ is the challenger's action space
+    \item $\pi: \mathcal{S} \times \Adv \times \Challenger \to \Delta(\mathcal{S})$ is the transition probability function
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Game-Theoretic Random Walk]
+A game-theoretic random walk is a tuple $(\mathcal{S}, \Strategy, \Payoff)$ where:
+\begin{itemize}
+    \item $\mathcal{S}$ is the state space
+    \item $\Strategy$ is the strategy space
+    \item $\Payoff: \mathcal{S} \times \Strategy \to \R$ is the payoff function
+\end{itemize}
+\end{definition}
